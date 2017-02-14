@@ -1,24 +1,26 @@
 {
-  "author"      : "greg.coonrod@gmail.com",
-  "name"        : "remindme",
-  "description" : "remindme",
-  "version"     : "0.0.1",
-  "engines"     : {
+  "author": "greg.coonrod@gmail.com",
+  "name": "remindme",
+  "description": "remindme",
+  "version": "0.0.1",
+  "engines": {
     "node": ">=6.0.0"
   },
-  "dependencies" : {
-    "actionhero" : "16.0.0",
-    "ws"         : "latest",
-    "fakeredis"  : "latest",
-    "ioredis"    : "latest"
+  "dependencies": {
+    "actionhero": "16.0.0",
+    "bluebird": "^3.4.7",
+    "fakeredis": "latest",
+    "ioredis": "latest",
+    "twilio": "^2.11.1",
+    "ws": "latest"
   },
-  "devDependencies" : {
-    "mocha"  : "latest",
-    "should" : "latest"
+  "devDependencies": {
+    "mocha": "latest",
+    "should": "latest"
   },
-  "scripts" : {
-    "start"        : "actionhero start",
-    "actionhero"   : "actionhero",
-    "test"         : "NODE_ENV=test mocha"
+  "scripts": {
+    "start": "actionhero start",
+    "actionhero": "actionhero",
+    "test": "NODE_ENV=test mocha"
   }
 }
