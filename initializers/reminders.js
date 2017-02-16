@@ -1,6 +1,6 @@
 'use strict'
 
-const reduce = require('lodash').reduce;
+const isObject = require('lodash').isObject;
 
 module.exports = {
     loadPriority: 1000,
@@ -10,10 +10,15 @@ module.exports = {
         api.reminders = {};
 
         api.reminders._parseRecurring = function(recurring) {
-            let parts = recurring.split(' ');
-            return reduce(parts, (result, value, index) => {
-                //if every?
-            }, {});
+            if (isObject(recurring)) {
+                return api.reminders._parseRecurringObject(recurring)
+            }
+
+            throw new Error('Unsupported recurring definition!');
+        }
+
+        api.reminders._parseRecurringObject = function(recurring) {
+            return null;
         }
 
         api.reminders.calculateNextReminder = function(recurring, now) {
