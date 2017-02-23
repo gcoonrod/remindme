@@ -22,7 +22,7 @@ exports.task = {
         api.messages.send(message)
             .then(response => {
                 api.log(['Reminder sent successfully.'], 'info');
-                api.log(['Message response.'], debug, response);
+                api.log(['Message response.'], 'debug', response);
                 if (params.recurring) {
                     let timestamp = api.reminders.calculateNextReminder(params.recurring, new Date());
                     api.tasks.enqueueAt(timestamp, 'sendReminder', params, (error, toRun) => {
