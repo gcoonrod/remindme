@@ -9,7 +9,7 @@
   "license": "MIT",
   "version": "0.0.1",
   "engines": {
-    "node": ">=6.0.0"
+    "node": "=6.9.5"
   },
   "dependencies": {
     "actionhero": "16.0.0",
@@ -29,6 +29,6 @@
   "scripts": {
     "start": "actionhero start",
     "actionhero": "actionhero",
-    "test": "NODE_ENV=test mocha"
+    "test": "NODE_ENV=test mocha test/**/*.js"
   }
 }
