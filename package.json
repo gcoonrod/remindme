@@ -2,6 +2,11 @@
   "author": "greg.coonrod@gmail.com",
   "name": "remindme",
   "description": "remindme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gcoonrod/remindme.git"
+  },
+  "license": "MIT",
   "version": "0.0.1",
   "engines": {
     "node": ">=6.0.0"
