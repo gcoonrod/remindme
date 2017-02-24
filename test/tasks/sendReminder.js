@@ -46,7 +46,7 @@ describe('Task Tests: sendReminder', function() {
 
     it('should enqueue another instance if there is a next reminder', done => {
         sinon.stub(api.messages, 'send');
-        sinon.stub(api.tasks, 'enqueueAt').callsArg(3);
+        sinon.stub(api.tasks, 'enqueueAt').callsArg(4);
 
         api.messages.send.returns(Promise.resolve({}));
 

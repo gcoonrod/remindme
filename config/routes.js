@@ -27,6 +27,18 @@ exports['default'] = {
 
       ---------------------- */
 
+      post: [
+          { path: '/reminders', action: 'createReminder'}
+      ],
+
+      get: [
+          { path: '/reminders', action: 'listReminders'},
+          { path: '/reminders/:id', action: 'getReminder'}
+      ],
+
+      delete: [
+          { path: '/reminders/:id', action: 'deleteReminder'}
+      ]
     }
   }
 }
